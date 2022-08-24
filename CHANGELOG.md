@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.0.7 - 2022-08-24
+* Fixed crash on initialization with KameleoonConfiguration parameter
+
 ## 2.0.6 - 2022-08-03
 * Added update campaigns and feature flag configurations instantaneously with Real-Time Streaming Architecture: [`documentation`](https://developers.kameleoon.com/java-sdk.html#streaming) or [`product Updates`](https://www.kameleoon.com/en/blog/real-time-streaming)
 * Added **KameleoonConfiguration**, it can be used as parameter during initialization of a client. Related to [`KameleoonClientFactory.create`](https://developers.kameleoon.com/java-sdk.html#com-kameleoon-kameleoonclientfactory)
