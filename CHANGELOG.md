@@ -1,6 +1,26 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.0 - 2023-02-17
+* Added support of new feature flag rules:
+    - [`getFeatureVariationKey`](https://developers.kameleoon.com/java-sdk.html#getFeatureVariationKey)
+    - `obtainFeatureVariable` -> [`getFeatureVariable`](https://developers.kameleoon.com/java-sdk.html#getFeatureVariable)
+    - [`getFeatureAllVariables`](https://developers.kameleoon.com/java-sdk.html#getFeatureAllVariables)
+    - `activateFeature` -> [`isFeatureActive`](https://developers.kameleoon.com/java-sdk.html#isFeatureActive)
+* Renaming of methods (old methods warn you on using and will be removed later)
+    - `obtainVisitorCode` -> [`getVisitorCode`](https://developers.kameleoon.com/java-sdk.html#getVisitorCode)
+    - `obtainVariationAssociatedData` -> [`getVariationAssociatedData`](https://developers.kameleoon.com/java-sdk.html#getVariationAssociatedData),
+    - `obtainFeatureAllVariables` -> [`getFeatureAllVariables`](https://developers.kameleoon.com/java-sdk.html#getFeatureAllVariables),
+    - `obtainExperimentList` -> [`getExperimentList`](https://developers.kameleoon.com/java-sdk.html#getExperimentList)
+    - `obtainExperimentListForVisitorCode` -> [`getExperimentListForVisitorCode`](https://developers.kameleoon.com/java-sdk.html#getExperimentListForVisitorCode)
+    - `obtainFeatureList` -> [`getFeatureList`](https://developers.kameleoon.com/java-sdk.html#getFeatureList)
+    - `obtainFeatureListListForVisitorCode` -> [`getActiveFeatureListForVisitorCode`](https://developers.kameleoon.com/java-sdk.html#getActiveFeatureListForVisitorCode)
+* Renaming of exceptions:
+    - `NotActivated` -> `NotAllocated`
+* Changes in Kameleoon Data:
+    - Added possibility to set [`UserAgent`](https://developers.kameleoon.com/java-sdk.html#useragent).
+* Removed blocking mode of SDK. Related to methods: [`triggerExperiment`](https://developers.kameleoon.com/java-sdk.html#triggerexperiment), [`isFeatureActive`](https://developers.kameleoon.com/java-sdk.html#isFeatureActive)
+
 ## 2.0.7 - 2022-08-24
 * Fixed crash on initialization with KameleoonConfiguration parameter
 
