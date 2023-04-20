@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.1.0 - 2023-04-20
+* Added a new method which can be used to simplify utilization of hybrid mode:
+    - [`getEngineTrackingCode`](https://developers.kameleoon.com/java-sdk.html#getEngineTrackingCode)
+* Added possibility for [`CustomData`](https://developers.kameleoon.com/java-sdk.html#customdata) to use variable argument list of values
+* Renaming of method:
+    - `retrieveDataFromRemoteSource` -> [`getRemoteData`](https://developers.kameleoon.com/java-sdk.html#getRemoteData)
+
 ## 3.0.0 - 2023-02-17
 * Added support of new feature flag rules:
     - [`getFeatureVariationKey`](https://developers.kameleoon.com/java-sdk.html#getFeatureVariationKey)
