@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.1.1 - 2023-04-28
+* Minor improvements
+
 ## 3.1.0 - 2023-04-20
 * Added a new method which can be used to simplify utilization of hybrid mode:
     - [`getEngineTrackingCode`](https://developers.kameleoon.com/java-sdk.html#getEngineTrackingCode)
