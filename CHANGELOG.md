@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.1.2 - 2023-05-17
+* All Kameleoon exceptions are inherited from the KameleoonExceptions class.
+
 ## 3.1.1 - 2023-04-28
 * Minor improvements
 
