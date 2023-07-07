@@ -1,6 +1,23 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.2.0 - 2023-07-07
+* Added method to fetch remote visitor's data (with an optional capability to add data for a visitor):
+    - [`getRemoteVisitorData`](https://developers.kameleoon.com/java-sdk.html#getRemoteVisitorData)
+* Removed `enableProxySupport` method.
+* Minor changes:
+    - [`getRemoteData`](https://developers.kameleoon.com/java-sdk.html#getRemoteData) returns object of `CompletableFuture<JsonObject>` type.
+    - [`getRemoteData`](https://developers.kameleoon.com/java-sdk.html#getRemoteData) method does not throw `HttpException` exception anymore.
+    - `retrieveDataFromRemoteSource` method does not throw `HttpException` and `IOException` exceptions anymore.
+    - [`Browser`] data class could accept version number of browser
+* Added new conditions for targeting:
+    - `Visitor Code`
+    - `SDK Language`
+    - [`Page Title & Page Url`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#pageview)
+    - [`Browser`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#browser)
+    - [`Device`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#device)
+    - [`Conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#trackconversion)
+
 ## 3.1.2 - 2023-05-17
 * All Kameleoon exceptions are inherited from the KameleoonExceptions class.
 
