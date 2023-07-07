@@ -9,7 +9,7 @@ All notable changes to this project will be documented in this file.
     - [`getRemoteData`](https://developers.kameleoon.com/java-sdk.html#getRemoteData) returns object of `CompletableFuture<JsonObject>` type.
     - [`getRemoteData`](https://developers.kameleoon.com/java-sdk.html#getRemoteData) method does not throw `HttpException` exception anymore.
     - `retrieveDataFromRemoteSource` method does not throw `HttpException` and `IOException` exceptions anymore.
-    - [`Browser`] data class could accept version number of browser
+    - `Browser` data class could accept version number of browser
 * Added new conditions for targeting:
     - `Visitor Code`
     - `SDK Language`
