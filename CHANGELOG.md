@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.2.1 - 2023-07-19
+* Added new conditions for targeting:
+    - `Explicit Trigger`
+
 ## 3.2.0 - 2023-07-07
 * Added method to fetch remote visitor's data (with an optional capability to add data for a visitor):
     - [`getRemoteVisitorData`](https://developers.kameleoon.com/java-sdk.html#getRemoteVisitorData)
