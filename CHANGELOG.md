@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.2.2 - 2023-07-20
+* Minor improvements
+
 ## 3.2.1 - 2023-07-19
 * Added new conditions for targeting:
     - `Explicit Trigger`
