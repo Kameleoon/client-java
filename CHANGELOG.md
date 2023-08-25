@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.2.3 - 2023-08-25
+### Bug fixes
+* Fixed an issue where the SDK couldn't update the data configuration when using the [Real-Time Streaming Architecture](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#streaming)
+
 ## 3.2.2 - 2023-07-20
 * Minor improvements
 
