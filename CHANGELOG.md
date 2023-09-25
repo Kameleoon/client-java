@@ -1,6 +1,24 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.3.0 - 2023-09-25
+### Features
+* Added new parameter [`sessionDuration`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#additional-configuration) to `KameleoonConfiguration` and `session_duration` field to the external configuration file. The session duration setting determines the time (in minutes) that a visitor's data is retained in RAM. When a session expires, the visitor data is deleted. You can restore the data using [`getRemoteVisitorData`](https://developers.kameleoon.com/java-sdk.html#getRemoteVisitorData). The `visitorDataMaximumSize` method has been deprecated. Use the new `sessionDuration` method instead.
+* Starting from this release, it is now imperative that your application gracefully handles `HttpException` exceptions (using the `exceptionally` method of the `CompletableFuture` instance) for the following methods:
+    - [`getRemoteData`](https://developers.kameleoon.com/java-sdk.html#getRemoteData)
+    - [`getRemoteVisitorData`](https://developers.kameleoon.com/java-sdk.html#getRemoteVisitorData)
+* Introduced a new data parameter called [`LegalConsent`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#legalconsent) which can have values of `true` or `false`. It's used to indicate whether legal consent is received from visitors or not. The [`LegalConsent`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#legalconsent) parameter determines which data can be included in tracking requests, enabling to adhere to legal and regulatory requirements while responsibly managing visitor data. More information could be found at: https://help.kameleoon.com/consent-management-policy/
+* Changed syntax for creation of [`Device`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#device) and [`Browser`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#browser) data:
+    - `Device::DESKTOP` is now `Device.desktop()`
+    - `Device::TABLET` is now `Device.tablet()`
+    - `Device::PHONE` is now `Device.phone()`
+    - `Browser::CHROME` is now `Browser.chrome()`
+    - `Browser::INTERNET_EXPLORER` is now `Browser.internetExplorer()`
+    - `Browser::FIREFOX` is now `Browser.firefox()`
+    - `Browser::SAFARI` is now `Browser.safari()`
+    - `Browser::OPERA` is now `Browser.opera()`
+    - `Browser::OTHER` is now `Browser.other()`
+
 ## 3.2.3 - 2023-08-25
 ### Bug fixes
 * Fixed an issue where the SDK couldn't update the data configuration when using the [Real-Time Streaming Architecture](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#streaming)
