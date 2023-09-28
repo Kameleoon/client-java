@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.3.1 - 2023-09-28
+### Bug fixes
+* Stability and performance improvements
+
 ## 3.3.0 - 2023-09-25
 ### Features
 * Added new parameter [`sessionDuration`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#additional-configuration) to `KameleoonConfiguration` and `session_duration` field to the external configuration file. The session duration setting determines the time (in minutes) that a visitor's data is retained in RAM. When a session expires, the visitor data is deleted. You can restore the data using [`getRemoteVisitorData`](https://developers.kameleoon.com/java-sdk.html#getRemoteVisitorData). The `visitorDataMaximumSize` method has been deprecated. Use the new `sessionDuration` method instead.
