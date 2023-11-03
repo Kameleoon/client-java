@@ -1,6 +1,50 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.0.0 - 2023-11-03
+### Breaking changes
+* Removed all deprecated methods and exceptions related to **experiments**:
+    - `triggerExperiment`
+    - `getVariationAssociatedData` (`obtainVariationAssociatedData`)
+    - `getExperimentList`
+    - `getExperimentListForVisitor`
+    - `ExperimentConfigurationNotFound`
+    - `NotTargeted`
+    - `NotAllocated`
+    - `SiteCodeDisabled`
+* Removed additional methods that were deprecated in 3.x versions:
+    - `activateFeature`
+    - `obtainVisitorCode`
+    - `retrieveDataFromRemoteSource`
+* Renamed the following classes, methods and exceptions:
+    - `KameleoonConfiguration` to [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#example-code)
+    - `getFeatureAllVariables` to [`getFeatureVariationVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getfeaturevariationvariables)
+    - `FeatureConfigurationNotFound` to `FeatureNotFound`
+    - `VariationConfigurationNotFound` to `FeatureVariationNotFound`
+    - `CredentialsNotFound` to `ConfigCredentialsInvalid`
+    - `VisitorCodeNotValid` to `VisitorCodeInvalid`
+* Changes in the [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#additional-configuration) file:
+    - removed `visitor_data_maximum_size`
+    - renamed `session_duration` to `session_duration_minute`
+    - renamed `refresh_interval` to `refresh_interval_minute`
+* Added new exception [`FeatureEnvironmentDisabled`] indicating that the feature flag is disabled for certain environments. The following methods can throw the new exception:
+    - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getfeaturevariationkey)
+    - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getfeaturevariable)
+    - [`getFeatureVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getfeaturevariables)
+    - [`getFeatureVariationVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getfeaturevariationvariables)
+* Removed parameter `topLevelDomain` from [`getVisitorCode`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getvisitorcode). Instead, use the `topLevelDomain` parameter in the [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#additional-configuration) (using either the `KameleoonClientConfig` object or the external configuration file).
+* Added new exception [`SiteCodeIsEmpty`] for method [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#create) indicating that the provided sitecode is empty.
+
+### Features
+* Added [`setLegalConsent`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#setlegalconsent) method to determine the types data Kameleoon includes in tracking requests. This helps you adhere to legal and regulatory requirements while responsibly managing visitor data. You can find more information in the [Consent management policy](https://help.kameleoon.com/consent-management-policy/).
+* Added [`getFeatureVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getfeaturevariables) method to retrieve all variable keys and their corresponding values assigned to a visitor's variation for a specific feature flag.
+* Added new configuration parameters to [`KameleoonClientConfig`](https://developers.kameleoon.com/java-sdk.html#additional-configuration) and the [configuration](https://developers.kameleoon.com/java-sdk.html#additional-configuration) file:
+    - `topLevelDomain`(`top_level_domain`), which is used to set the domain name.
+    - `defaultTimeout` (`default_timeout_millisecond`) that designates the predefined time interval that Kameleoon stores the visitor and their associated data in memory.
+
+### Bug fixes
+* Stability and performance improvements
+
 ## 3.3.1 - 2023-09-28
 ### Bug fixes
 * Stability and performance improvements
