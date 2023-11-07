@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.0.1 - 2023-11-07
+### Features
+* Parameter `HttpServletResponse` becomes optional for method [`setLegalConsent`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#setlegalconsent)
+
+
 ## 4.0.0 - 2023-11-03
 ### Breaking changes
 * Removed all deprecated methods and exceptions related to **experiments**:
