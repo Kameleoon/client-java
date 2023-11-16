@@ -38,7 +38,7 @@ All notable changes to this project will be documented in this file.
     - [`getFeatureVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getfeaturevariables)
     - [`getFeatureVariationVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getfeaturevariationvariables)
 * Removed parameter `topLevelDomain` from [`getVisitorCode`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getvisitorcode). Instead, use the `topLevelDomain` parameter in the [configuration](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#additional-configuration) (using either the `KameleoonClientConfig` object or the external configuration file).
-* Added new exception [`SiteCodeIsEmpty`] for method [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#create) indicating that the provided sitecode is empty.
+* Added new exception `SiteCodeIsEmpty` for method [`KameleoonClientFactory.create`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#create) indicating that the provided sitecode is empty.
 
 ### Features
 * Added [`setLegalConsent`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#setlegalconsent) method to determine the types data Kameleoon includes in tracking requests. This helps you adhere to legal and regulatory requirements while responsibly managing visitor data. You can find more information in the [Consent management policy](https://help.kameleoon.com/consent-management-policy/).
