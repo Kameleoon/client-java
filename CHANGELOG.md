@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.0.2 - 2023-11-21
+### Bug fixes
+* Stability and performance improvements
+
 ## 4.0.1 - 2023-11-07
 ### Features
 * Changed the parameter `HttpServletResponse` in method [`setLegalConsent`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#setlegalconsent) to optional.
