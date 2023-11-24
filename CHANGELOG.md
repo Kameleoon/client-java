@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## 4.0.3 - 2023-11-24
 ### Bug fixes
-* Resolved an issue where the [`KameleoonClient`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/csharp-sdk/#waitinit) could throw `NullPointerException` in certain cases.
+* Resolved an issue where the [`KameleoonClient`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#initialize-the-kameleoon-client) could throw `NullPointerException` in certain cases.
 
 ## 4.0.2 - 2023-11-21
 ### Bug fixes
@@ -40,7 +40,7 @@ All notable changes to this project will be documented in this file.
     - removed `visitor_data_maximum_size`
     - renamed `session_duration` to `session_duration_minute`
     - renamed `refresh_interval` to `refresh_interval_minute`
-* Added new exception [`FeatureEnvironmentDisabled`] indicating that the feature flag is disabled for certain environments. The following methods can throw the new exception:
+* Added new exception `FeatureEnvironmentDisabled` indicating that the feature flag is disabled for certain environments. The following methods can throw the new exception:
     - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getfeaturevariationkey)
     - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getfeaturevariable)
     - [`getFeatureVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getfeaturevariables)
