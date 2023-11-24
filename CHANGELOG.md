@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.0.3 - 2023-11-24
+### Bug fixes
+* Resolved an issue where the [`KameleoonClient`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/csharp-sdk/#waitinit) could throw `NullPointerException` in certain cases.
+
 ## 4.0.2 - 2023-11-21
 ### Bug fixes
 * Stability and performance improvements
