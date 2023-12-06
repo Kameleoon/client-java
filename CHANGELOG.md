@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.0.4 - 2023-12-06
+### Bug fixes
+* Stability and performance improvements
+
 ## 4.0.3 - 2023-11-24
 ### Bug fixes
 * Resolved an issue where the [`KameleoonClient`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#initialize-the-kameleoon-client) could throw `NullPointerException` in certain cases.
