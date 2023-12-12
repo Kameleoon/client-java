@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.0.5 - 2023-12-12
+### Bug fixes
+* Stability and performance improvements
+
 ## 4.0.4 - 2023-12-06
 ### Bug fixes
 * Stability and performance improvements
