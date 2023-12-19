@@ -61,7 +61,7 @@ All notable changes to this project will be documented in this file.
 * Added [`getFeatureVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getfeaturevariables) method to retrieve all variable keys and their corresponding values assigned to a visitor's variation for a specific feature flag.
 * Added new configuration parameters to [`KameleoonClientConfig`](https://developers.kameleoon.com/java-sdk.html#additional-configuration) and the [configuration](https://developers.kameleoon.com/java-sdk.html#additional-configuration) file:
     - `topLevelDomain`(`top_level_domain`), which is used to set the domain name.
-    - `defaultTimeout` (`default_timeout_millisecond`) that designates the predefined time interval that Kameleoon stores the visitor and their associated data in memory.
+    - `defaultTimeout` (`default_timeout_millisecond`) that designates the predefined timeout for network requests.
 
 ### Bug fixes
 * Stability and performance improvements
