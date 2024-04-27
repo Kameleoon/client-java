@@ -1,6 +1,34 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.2.0 - 2024-04-27
+### Features
+* Added a new optional parameter `isUniqueIdentifier` that provides additional capabilities with [cross-device experimentation](https://developers.kameleoon.com/core-concepts/cross-device-experimentation) in the following methods:
+    - [`flush`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#flush)
+    - [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#trackconversion)
+    - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getfeaturevariationkey)
+    - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getfeaturevariable)
+    - [`isFeatureActive`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#isfeatureactive)
+    - [`getFeatureVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getfeaturevariables)
+    - [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getremotevisitordata)
+* New targeting conditions are now available (some of them may require [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getremotevisitordata) pre-loaded data)
+  - Browser Cookie
+  - Operating System
+  - IP Geolocation
+  - Kameleoon Segment
+  - Target Feature Flag
+  - Previous Page
+  - Number of Page Views
+  - Time since First Visit
+  - Time since Last Visit
+  - Number of Visits Today
+  - Total Number of Visits
+  - New or Returning Visitor
+* New Kameleoon Data types were introduced:
+  - [`Cookie`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#cookie)
+  - [`OperatingSystem`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#operatingsystem)
+  - [`Geolocation`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#geolocation)
+
 ## 4.1.1 - 2024-04-04
 ### Bug fixes
 * Stability and performance improvements
