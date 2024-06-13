@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.3.0 - 2024-06-13
+### Features
+* The [Likelihood to convert](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments) targeting condition is now available. Pre-loading the data is required using [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getremotevisitordata) with the `kcs` parameter set to `true`.
+* Added [`getActiveFeatures`](https://developers.kameleoon.com/java-sdk.html#getActiveFeatures) method uses for obtaining a information about the active feature flags that are available for the visitor.
+* Method [`getActiveFeatureListForVisitorCode`](https://developers.kameleoon.com/java-sdk.html#getActiveFeatureListForVisitorCode) is deprecated
+### Bug fixes
+* Resolved an issue where the [`getVisitorCode`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getvisitorcode) did not apply the provided `defaultVisitorCode`.
+
+
 ## 4.2.1 - 2024-05-06
 ### Bug fixes
 * Stability and performance improvements
