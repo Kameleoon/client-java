@@ -1,6 +1,30 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.4.0 - 2024-07-11
+### Features
+* Enhanced [logging](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#logging):
+    - Introduced [log levels](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#log-levels):
+        - `None`
+        - `Error`
+        - `Warning`
+        - `Info`
+        - `Debug`
+    - Added support for [custom logger](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#custom-handling-of-logs) implementations.
+* Improved the tracking mechanism to consolidate multiple visitors into a single request. The new approach combines information on all affected visitors into one request, which is sent once per interval.
+* Added a new variation of the [`flush(boolean instant, String visitorCode)`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#flush) with `instant` parameter. If the parameter's value is `true` the visitor's data is tracked instantly. Otherwise, the visitor's data will be tracked with next tracking interval. Default value of the parameter is `false`.
+* Added new configuration parameter `trackingInterval` (`tracking_interval_millisecond`) to [`KameleoonClientConfig`](https://developers.kameleoon.com/java-sdk.html#additional-configuration) and the [configuration](https://developers.kameleoon.com/java-sdk.html#additional-configuration) file, which is used to set interval for tracking requests. Default value is `1000` milliseconds.
+* New Kameleoon Data type [`UniqueIdentifier`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#uniqueidentifier) is introduced. It will be used in all methods instead of `isUniqueIdentifier` parameter. All methods with `isUniqueIdentifier` parameter are marked as deprecated:
+    - [`flush`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#flush)
+    - [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#trackconversion)
+    - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getfeaturevariationkey)
+    - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getfeaturevariable)
+    - [`getFeatureVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getfeaturevariables)
+    - [`isFeatureActive`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#isfeatureactive)
+    - [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getremotevisitordata)
+### Bug fixes
+* Resolved an issue where the [`flush(null, isUniqueIdentifier)`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#flush) method was incorrectly sending requests with `isUniqueIdentifier` applied to each visitor. Now, `isUniqueIdentifier` is only considered if `visitorCode` is provided and not null.
+
 ## 4.3.0 - 2024-06-13
 ### Features
 * The [Likelihood to convert](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments) targeting condition is now available. Pre-loading the data is required using [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getremotevisitordata) with the `kcs` parameter set to `true`.
