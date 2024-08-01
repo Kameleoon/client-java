@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.5.0 - 2024-08-01
+### Features
+* Added [`waitInit`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#waitinit) method, which allows to check if the client has been successfully initialized before proceeding with other operations.
+### Bug fixes
+* Resolved an issue where the SDK could become stuck during prolonged Data API outages.
+
 ## 4.4.0 - 2024-07-11
 ### Features
 * Enhanced [logging](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#logging):
