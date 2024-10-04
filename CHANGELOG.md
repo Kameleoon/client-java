@@ -1,6 +1,21 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.6.0 - 2024-10-04
+### Features
+* Introduced new evaluation methods for clarity and improved efficiency when working with the SDK:
+  - [`getVariation`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getvariation)
+  - [`getVariations`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getvariations)
+* These methods replace the deprecated ones:
+  - [`getFeatureVariationKey`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getfeaturevariationkey)
+  - [`getFeatureVariable`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getfeaturevariable)
+  - [`getFeatureVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getfeaturevariables)
+  - [`getActiveFeatures`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getactivefeatures)
+  - [`getFeatureVariationVariables`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getfeaturevariationvariables)
+* A new version of the [`isFeatureActive`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#isfeatureactive) method now includes an optional `track` parameter, which controls whether the assigned variation is tracked (default: `true`).
+* Enhanced top-level domain validation within the SDK. The implementation now includes automatic trimming of extraneous symbols and provides a [warning](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#log-levels) when an invalid domain is detected.
+* Enhanced the [`getEngineTrackingCode`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getenginetrackingcode) method to properly handle `JS` and `CSS` variables.
+
 ## 4.5.1 - 2024-08-13
 ### Bug fixes
 * Fixed an issue that caused duplicate entries in feature flag results for both anonymous and authorized/identified visitors during data reconciliation. This problem occurred when custom data of type mapping ID was not consistently sent for all sessions.
