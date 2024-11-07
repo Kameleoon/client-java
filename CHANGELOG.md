@@ -7,9 +7,9 @@ All notable changes to this project will be documented in this file.
 * Introduced a new `visitorCode` parameter to [`RemoteVisitorDataFilter`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#using-parameters-in-getremotevisitordata). This parameter determines whether to use the `visitorCode` from the most recent previous visit instead of the current `visitorCode`. When enabled, this feature allows visitor exposure to be based on the retrieved `visitorCode`, facilitating [cross-device reconciliation](https://developers.kameleoon.com/core-concepts/cross-device-experimentation/). Default value of the parameter is `true`.
 * Use [`RemoteVisitorDataFilterBuilder`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#using-parameters-in-getremotevisitordata) instead of the deprecated [`RemoteVisitorDataFilter`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#using-parameters-in-getremotevisitordata) constructor.
 ### Bug fixes
-*  > [!WARNING]
-> This change may impact your existing targeting. Please review your targeting conditions to ensure accuracy.
-Fixed an issue with the [`Page URL`][Targeting Conditions] and [`Page Title`][Targeting Conditions] targeting conditions, where the condition evaluated all previously visited URLs in the session instead of only the current URL, corresponding to the latest added `PageView`
+* Fixed an issue with the [`Page URL`](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments/#benefits-of-calling-getremotevisitordata) and [`Page Title`](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments/#benefits-of-calling-getremotevisitordata) targeting conditions, where the condition evaluated all previously visited URLs in the session instead of only the current URL, corresponding to the latest added [`PageView`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#pageview).
+*NOTE* : This change may impact your existing targeting. Please review your targeting conditions to ensure accuracy.
+
 
 ## 4.6.0 - 2024-10-04
 ### Features
