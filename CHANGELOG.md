@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 * Use [`RemoteVisitorDataFilterBuilder`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#using-parameters-in-getremotevisitordata) instead of the deprecated [`RemoteVisitorDataFilter`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#using-parameters-in-getremotevisitordata) constructor.
 ### Bug fixes
 * Fixed an issue with the [`Page URL`](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments/#benefits-of-calling-getremotevisitordata) and [`Page Title`](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments/#benefits-of-calling-getremotevisitordata) targeting conditions, where the condition evaluated all previously visited URLs in the session instead of only the current URL, corresponding to the latest added [`PageView`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#pageview).
-*NOTE* : This change may impact your existing targeting. Please review your targeting conditions to ensure accuracy.
+**NOTE**: This change may impact your existing targeting. Please review your targeting conditions to ensure accuracy.
 
 
 ## 4.6.0 - 2024-10-04
