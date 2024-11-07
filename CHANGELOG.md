@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 * Introduced a new package with support for [Jakarta EE](https://jakarta.ee/), complementing the existing package for [Java EE](https://www.oracle.com/java/technologies/java-ee-glance.html). The new package is now available in the [Maven repository](https://central.sonatype.com/artifact/com.kameleoon/kameleoon-client-java-jakarta). For more detailed information, please refer to [this documentation](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#install-the-java-client).
 * Introduced a new `visitorCode` parameter to [`RemoteVisitorDataFilter`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#using-parameters-in-getremotevisitordata). This parameter determines whether to use the `visitorCode` from the most recent previous visit instead of the current `visitorCode`. When enabled, this feature allows visitor exposure to be based on the retrieved `visitorCode`, facilitating [cross-device reconciliation](https://developers.kameleoon.com/core-concepts/cross-device-experimentation/). Default value of the parameter is `true`.
 * Use [`RemoteVisitorDataFilterBuilder`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#using-parameters-in-getremotevisitordata) instead of the deprecated [`RemoteVisitorDataFilter`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#using-parameters-in-getremotevisitordata) constructor.
+### Bug fixes
+*  Fixed an issue with the [`Page URL`][Targeting Conditions] and [`Page Title`][Targeting Conditions] targeting conditions, where the condition evaluated all previously visited URLs in the session instead of only the current URL, corresponding to the latest added `PageView`
+> [!WARNING]
+> This change may impact your existing targeting. Please review your targeting conditions to ensure accuracy.
 
 ## 4.6.0 - 2024-10-04
 ### Features
