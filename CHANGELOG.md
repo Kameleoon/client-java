@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.7.1 - 2024-11-14
+### Bug fixes
+* Fixed an issue with the [`Page URL`](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments/#benefits-of-calling-getremotevisitordata) and [`Page Title`](https://developers.kameleoon.com/feature-management-and-experimentation/using-visit-history-in-feature-flags-and-experiments/#benefits-of-calling-getremotevisitordata) targeting conditions, where the condition evaluated all previously visited URLs in the session instead of only the current URL, corresponding to the latest added [`PageView`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#pageview).<br/>
+**NOTE**: This change may impact your existing targeting. Please review your targeting conditions to ensure accuracy.
+
 ## 4.7.0 - 2024-10-24
 ### Features
 * Introduced a new package with support for [Jakarta EE](https://jakarta.ee/), complementing the existing package for [Java EE](https://www.oracle.com/java/technologies/java-ee-glance.html). The new package is now available in the [Maven repository](https://central.sonatype.com/artifact/com.kameleoon/kameleoon-client-java-jakarta). For more detailed information, please refer to [this documentation](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#install-the-java-client).
