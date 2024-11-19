@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## 4.7.2 - 2024-11-19
 ### Bug fixes
-* Resolved an issue where the validation of [top-level domains](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#additional-configuration) for `localhost` resulted in incorrect failures. The SDK now accepts the provided domain without modification if it is deemed invalid and logs an error to notify you of any issues with the specified domain.
+* Resolved an issue where the validation of [top-level domains](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#additional-configuration) for `localhost` resulted in incorrect failures. The SDK now accepts the provided domain without modification if it is deemed invalid and logs an [error](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#log-levels) to notify you of any issues with the specified domain.
 
 ## 4.7.1 - 2024-11-14
 ### Bug fixes
