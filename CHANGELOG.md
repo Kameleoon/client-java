@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.8.0 - 2024-11-28
+### Features
+* Added support for **simulated** variations.
+* Added the [`setForcedVariation()`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#setforcedvariation) method. This method allows explicitly setting a forced variation for a visitor, which will be applied during experiment evaluation.
+### Bug fixes
+* Fixed an issue where the [`Variation.isActive()`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#variation) method returned an incorrect value.
+
 ## 4.7.2 - 2024-11-19
 ### Bug fixes
 * Resolved an issue where the validation of [top-level domains](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#additional-configuration) for `localhost` resulted in incorrect failures. The SDK now accepts the provided domain without modification if it is deemed invalid and logs an [error](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#log-levels) to notify you of any issues with the specified domain.
