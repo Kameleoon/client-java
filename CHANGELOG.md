@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.8.1 - 2024-12-05
+### Bug fixes
+* Resolved an issue where the SDK could waste memory by creating new connections to the SSE server when utilizing the [Real-Time Streaming Architecture](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#streaming) if the SSE server was down.
+* Fixed an issue where the provided cookie values could not be applied when setting **simulated** variations.
+
 ## 4.8.0 - 2024-11-28
 ### Features
 * Added support for **simulated** variations.
