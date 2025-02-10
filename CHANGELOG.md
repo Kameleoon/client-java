@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.9.0 - 2025-02-10
+### Features
+* Added SDK support for **holdout experiments**. Visitors assigned to a holdout experiment are excluded from all other rollouts and experiments, and consistently receive the default variation. For visitors not in a holdout experiment, the standard evaluation process applies, allowing them to be evaluated for all feature flags as usual. Platform-wide release expected in February 2025.
+
 ## 4.8.1 - 2024-12-05
 ### Bug fixes
 * Resolved an issue where the SDK could waste memory by creating new connections to the SSE server when utilizing the [Real-Time Streaming Architecture](https://developers.kameleoon.com/feature-management-and-experimentation/technical-considerations/#streaming) if the SSE server was down.
