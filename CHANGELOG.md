@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.10.0 - 2025-02-26
+### Features
+* Added SDK support for **Mutually Exclusive Groups**. When feature flags are grouped into a **Mutually Exclusive Group**, only one flag in the group will be evaluated at a time. All other flags in the group will automatically return their default variation.
+* Added new configuration parameter `networkDomain` (`network_domain`) to [`KameleoonClientConfig`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#create) and the [configuration](https://developers.kameleoon.com/java-sdk.html#additional-configuration) file. This parameter allows specifying a custom domain for all outgoing network requests.
+* Added support for new conditions:
+    - Exclusive Campaign
+    - Experiment
+    - Personalization
+
 ## 4.9.0 - 2025-02-10
 ### Features
 * Added SDK support for **holdout experiments**. Visitors assigned to a holdout experiment are excluded from all other rollouts and experiments, and consistently receive the default variation. For visitors not in a holdout experiment, the standard evaluation process applies, allowing them to be evaluated for all feature flags as usual. Platform-wide release expected in February 2025.
