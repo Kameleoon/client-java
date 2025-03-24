@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 ### Features
 * Added new optional parameters `negative` and `metadata` to the [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#trackconversion) method.
 * Added new optional parameter `metadata` to the [`Conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#conversion) data constructor.
-* Changed log level of the deprecated logs from **warning** to **info**.
+* Changed the log level for deprecated methods from **WARNING** to **INFO**.
 
 ## 4.11.0 - 2025-03-18
 ### Features
