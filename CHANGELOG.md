@@ -1,9 +1,11 @@
+[trackconversion]: https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#trackconversion
+
 # Changelog
 All notable changes to this project will be documented in this file.
 
 ## 4.12.1 - 2025-03-26
-### Features
-* The value of the `revenue` parameter was not accounted for in some overloads of the [`trackConversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#trackconversion) method.
+### Bug fixes
+* The value of the `revenue` parameter was not accounted for in some overloads of the [`trackConversion`][trackconversion] method.
 
 ## 4.12.0 - 2025-03-24
 ### Features
