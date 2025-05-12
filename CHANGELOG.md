@@ -1,11 +1,11 @@
 [trackconversion]: https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#trackconversion
 
 # Changelog
+All notable changes to this project will be documented in this file.
+
 ## 4.12.2 - 2025-04-08
 ### Bug fixes
 * Changed the order in which **conversion** and **experiment** events are sent. This may lead to more accurate **visit**-level experiment reporting.
-
-All notable changes to this project will be documented in this file.
 
 ## 4.12.1 - 2025-03-26
 ### Bug fixes
