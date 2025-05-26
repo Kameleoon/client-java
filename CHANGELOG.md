@@ -1,6 +1,13 @@
 [trackconversion]: https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#trackconversion
 
 # Changelog
+## 4.13.0 - 2025-05-26
+### Features
+* Added support for a **New**/**Returning** visitor breakdown filter in reports (requires calling [`getRemoteVisitorData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getremotevisitordata)).
+* Added support for **304 (Not Modified)** responses from the SDK config service to avoid redundant updates and reduce traffic when the configuration hasn't changed.
+### Bug fixes
+* Fixed an issue where the value of the `negative` parameter was ignored in the [`trackConversion(String visitorCode, int goalId, boolean negative, float revenue)`][trackconversion] method overload.
+
 All notable changes to this project will be documented in this file.
 
 ## 4.12.2 - 2025-04-08
