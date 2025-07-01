@@ -1,6 +1,10 @@
 [trackconversion]: https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#trackconversion
 
 # Changelog
+## 4.14.1 - 2025-07-01
+### Bug fixes
+* Stability and performance improvements
+
 ## 4.14.0 - 2025-06-27
 ### Features
 * Added support for using a Custom Data value for traffic bucketing instead of the default visitor code. [Learn More](https://help.kameleoon.com/create-feature-flag/#Advanced_Flag_Settings).
