@@ -5,6 +5,7 @@
 ### Features
 * Added an `overwrite` flag to [`CustomData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#customdata), used as the `overwrite` parameter during tracking.
 * [`CustomData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#customdata) can now be created using a `name`, in addition to the existing method of using an `index`.
+* Added a new property `defaultVariationKey` and a method `getDefaultVariation()` to [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#featureflag). The method returns information about the default variation associated with the feature flag.
 * Added a new property `rules` of type [`List<Rule>`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#rule) to [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#featureflag), which defines the targeting rules associated with the feature flag.
 
 ## 4.16.0 - 2025-08-20
