@@ -1,6 +1,12 @@
 [trackconversion]: https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#trackconversion
 
 # Changelog
+## 4.17.0 - 2025-08-29
+### Features
+* Added an `overwrite` flag to [`CustomData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#customdata), used as the `overwrite` parameter during tracking.
+* [`CustomData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#customdata) can now be created using a `name`, in addition to the existing method of using an `index`.
+* Added a new property `rules` of type [`List<Rule>`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#rule) to [`FeatureFlag`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#featureflag), which defines the targeting rules associated with the feature flag.
+
 ## 4.16.0 - 2025-08-20
 ### Features
 * Introduced a new [`getDataFile`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#getdatafile) method. This method returns the current SDK configuration (also known as the **data file**) used for evaluation and targeting. It is **not** intended for production use to fetch variations for every feature flag in the returned list, as it is not optimized for performance. For that purpose, use [`getVariations`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getvariations) instead. `getDataFile` is mainly useful for debugging or QA, for example to let internal users manually select a variant for a specific feature flag in production.
