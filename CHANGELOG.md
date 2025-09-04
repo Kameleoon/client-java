@@ -1,6 +1,10 @@
 [trackconversion]: https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#trackconversion
 
 # Changelog
+## 4.17.1 - 2025-09-04
+### Bug fixes
+* Fixed an issue where a proxy host value was converted incorrectly.
+
 ## 4.17.0 - 2025-08-29
 ### Features
 * Added an `overwrite` flag to [`CustomData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#customdata), used as the `overwrite` parameter during tracking.
