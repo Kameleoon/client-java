@@ -1,6 +1,11 @@
 [trackconversion]: https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#trackconversion
 
 # Changelog
+## 4.17.2 - 2025-10-30
+### Bug fixes
+* Fixed an issue where [`Conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#conversion)'s metadata initialized with a name was not tracked.
+* Changed the **Unexpected TargetingConditionType** log's level to `INFO`.
+
 ## 4.17.1 - 2025-09-04
 ### Bug fixes
 * Fixed an issue where a proxy host value was converted incorrectly.
