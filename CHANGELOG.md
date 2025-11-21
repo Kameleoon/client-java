@@ -1,6 +1,12 @@
 [trackconversion]: https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#trackconversion
 
 # Changelog
+## 4.18.0 - 2025-11-21
+### Features
+* Updated evaluation and tracking logic to comply with GDPR requirements when consent is not given:
+    - If behavior is **partially blocked**, the default variation will be returned.
+    - If behavior is **completely blocked**, an exception will be thrown.
+
 ## 4.17.2 - 2025-10-30
 ### Bug fixes
 * Fixed an issue where [`Conversion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#conversion)'s metadata initialized with a name was not tracked.
