@@ -1,6 +1,12 @@
 [trackconversion]: https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk#trackconversion
 
 # Changelog
+## 4.19.0 - 2026-02-13
+### Features
+* Introduced support for the Kameleoon [`ApplicationVersion`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#applicationversion) data type, allowing the visitor’s application version to be set and used in targeting evaluation.
+* Updated the allowed range for the [`trackingInterval`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#additional-configuration). The new range is from **`1000` ms** (default) to **`5000` ms**, allowing a reduction in the number of tracking requests.
+* Introduced a new `track` parameter for [`addData`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#adddata). When set to `false`, the data is stored locally and used only for targeting evaluation; it is not sent to the Data API, helping to prevent duplicate data from being recorded. The default value is `true`. This behavior is consistent with the `track` parameter used in evaluation methods such as [`getVariation`](https://developers.kameleoon.com/feature-management-and-experimentation/web-sdks/java-sdk/#getvariation).
+
 ## 4.18.1 - 2025-12-24
 ### Bug fixes
 * Fixed an issue where **legal consent** was not taken into account during holdout evaluation.
